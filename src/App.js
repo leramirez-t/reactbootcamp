@@ -3,7 +3,11 @@ import logo from "./logo.svg";
 import "./App.css";
 
 //Components
-import Greet from "./components/Greet";
+import FunctionGreet from "./components/FunctionGreet";
+import ClassGreet from "./components/ClassGreet";
+
+import Post from "./components/Post";
+import { CardColumns, CardBody, CardImg, CardDeck } from "reactstrap";
 
 function App() {
   return (
@@ -21,8 +25,35 @@ function App() {
         >
           Learn React
         </a>
-        <Greet firstName="Luis" lastName="Ramirez" />
+        <FunctionGreet firstName="Luis" lastName="Ramirez" />
+        <ClassGreet firstName="Luis" lastName="Ramirez" />
       </header>
+      <CardColumns>
+        <Post
+          img="https://miro.medium.com/max/875/1*ckUQpy4qgOO60sVIW9pyoA.png"
+          title="BASED ON YOUR READING HISTORY"
+          subtitle="Getting Started with the AWS Websockets API"
+          text="An introduction to the power of an AWS Lambda real-time AWS Websocket API"
+          titlebutton="Button"
+          color="warning"
+        />
+        <Post
+          img="https://miro.medium.com/max/875/1*ckUQpy4qgOO60sVIW9pyoA.png"
+          title="BASED ON YOUR READING HISTORY"
+          subtitle="Getting Started with the AWS Websockets API"
+          text="An introduction to the power of an AWS Lambda real-time AWS Websocket API"
+          titlebutton="Button"
+          color="secondary"
+        />
+        <Post
+          img="https://miro.medium.com/max/875/1*ckUQpy4qgOO60sVIW9pyoA.png"
+          title="BASED ON YOUR READING HISTORY"
+          subtitle="Getting Started with the AWS Websockets API"
+          text="An introduction to the power of an AWS Lambda real-time AWS Websocket API"
+          titlebutton="Button"
+          color="danger"
+        />
+      </CardColumns>
     </div>
   );
 }
